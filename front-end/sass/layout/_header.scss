@@ -1,0 +1,46 @@
+.header {
+  position: relative;
+  height: 75vh;
+  background-image: linear-gradient(
+    to bottom,
+    rgba($color-grey-dark-1, 1),
+    rgba($color-black, 1)
+  );
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 60vh, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 60vh, 0% 100%);
+  @include respond(tab-port) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 65vh, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 65vh, 0% 100%);
+  }
+  @include respond(phone) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 70vh, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 70vh, 0% 100%);
+  }
+  &__logo-box {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    height: 10rem;
+    width: 10rem;
+  }
+
+  &__logo {
+    height: 90%;
+    transition: transform 1s;
+
+    animation: logoAnim 0.7s ease-out 1s;
+    animation-fill-mode: backwards;
+
+    &:hover {
+      // transform: rotateY(180deg);
+    }
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}

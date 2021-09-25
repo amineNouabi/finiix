@@ -1,0 +1,87 @@
+body {
+  color: $color-grey-dark-3;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  &-main {
+    display: inline-block;
+    font-size: 9rem;
+    font-weight: 200;
+    letter-spacing: 4rem;
+    margin-right: -3.48rem;
+
+    animation: moveFromTop 1s ease-out;
+
+    @include respond(tab-port) {
+      letter-spacing: 3.5rem;
+      margin-right: -2.98rem;
+    }
+
+    @include respond(phone) {
+      letter-spacing: 2.7rem;
+      margin-right: -2.18rem;
+    }
+
+    &--f {
+      color: $color-primary;
+    }
+  }
+
+  &-sub {
+    display: inline-block;
+    font-size: 3rem;
+    letter-spacing: 1rem;
+    font-weight: 200;
+
+    animation: moveFromRight 1s ease-out;
+
+    @include respond(tab-port) {
+      letter-spacing: 0.7rem;
+    }
+
+    @include respond(phone) {
+      letter-spacing: 0.4rem;
+    }
+  }
+}
+
+.heading-secondary {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 2.7rem;
+  letter-spacing: 0.7rem;
+  background: linear-gradient(to right, $color-primary, $color-black);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  &--white {
+    background: linear-gradient(to right, $color-primary, $color-white);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+.paragraph {
+  font-size: $default-font-size;
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: 70rem;
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}

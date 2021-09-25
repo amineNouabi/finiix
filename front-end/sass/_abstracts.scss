@@ -1,0 +1,130 @@
+/////////////////////////////////////////////////////
+///////////          VARIABLES            ///////////
+
+//----COLORS-------
+$color-primary: #feff01;
+
+$color-primary-light-1: #ffd43b;
+$color-primary-light-2: #ffe066;
+
+$color-primary-dark-1: #fab005;
+$color-primary-dark-2: #f59f00;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+$color-grey-light-3: rgb(219, 219, 219);
+
+$color-grey-dark-1: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+
+$color-white: #fff;
+$color-black: #000;
+
+//------FONT-SIZES------:
+$default-font-size: 1.6rem;
+
+//--------GRID--------:
+$grid-width: 114rem;
+
+$vertical-gutter-s: 6rem;
+$vertical-gutter: 8rem;
+
+$horizontal-gutter: 6rem;
+
+/////////////////////////////////////////////////////
+///////////          MIXINS              ///////////
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+//-------MEDIA QUERY MANAGER-------:
+/*
+    0 - 600px      : phone
+    600px - 900px  : tab-port    (tablet portrait)
+    900px - 1200px : tab-land    (tablet landscape)
+    1200px - 1800px: desktop     (normal style)
+    1800px +       : big-desktop
+
+    1em = 16px
+*/
+@mixin respond($device) {
+  @if $device == phone {
+    @media (max-width: 37.5em) {
+      // 600px;
+      @content;
+    }
+  }
+  @if $device == tab-port {
+    @media (max-width: 56.25em) {
+      // 900px;
+      @content;
+    }
+  }
+  @if $device == tab-land {
+    @media (max-width: 75em) {
+      // 1200px;
+      @content;
+    }
+  }
+  @if $device == big-desktop {
+    @media (min-width: 112.5em) {
+      // 1800px;
+      @content;
+    }
+  }
+}
+
+/////////////////////////////////////////////////////
+///////////          Utilities           ///////////
+
+//-----BOTTOM--MARGINS-----:
+.u-margin-b-s {
+  // small  margin-bottom
+  margin-bottom: 1.5rem !important;
+}
+.u-margin-b-m {
+  // medium margin-bottom
+  margin-bottom: 4rem !important;
+}
+.u-margin-b-l {
+  // large  margin-bottom
+  margin-bottom: 8rem !important;
+  @include respond(tab-port) {
+    margin-bottom: 5rem !important;
+  }
+}
+.u-margin-b-x {
+  // XLarge margin-bottom
+  margin-bottom: 10rem !important;
+  @include respond(tab-port) {
+    margin-bottom: 8rem !important;
+  }
+}
+
+//------TOP--MARGINS-------:
+.u-margin-t-s {
+  // small  margin-top
+  margin-top: 1.5rem !important;
+}
+.u-margin-t-m {
+  // medium margin-top
+  margin-top: 4rem !important;
+}
+.u-margin-t-l {
+  // large  margin-top
+  margin-top: 8rem !important;
+}
+.u-margin-t-x {
+  // XLarge margin-top
+  margin-top: 10rem !important;
+}
+
+.u-center-text {
+  text-align: center !important;
+}

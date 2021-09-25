@@ -1,0 +1,39 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  //set 1rem to be 10px (browser sets font-size: 16px so ---> 62.5% of 16px is 10px;)
+  font-size: 62.5%;
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // 9px
+  }
+  @include respond(tab-port) {
+    font-size: 50%; // 8px
+  }
+  @include respond(big-desktop) {
+    font-size: 75%; // 12px;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  background-color: $color-white;
+  padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0; // 8px
+  }
+}
+
+::selection {
+  //background-color: $color-primary;
+  //color: $color-black;
+  background-color: $color-grey-dark-3;
+  color: $color-primary;
+}

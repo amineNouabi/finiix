@@ -1,0 +1,15 @@
+{
+  "name": "finiix-front-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css",
+    "watch:sass": "node-sass -w sass/main.scss css/style.css"
+  },
+  "author": "Ahmed Amine Nouabi",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

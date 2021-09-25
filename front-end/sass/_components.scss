@@ -1,0 +1,90 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    display: inline-block;
+    padding: 1.5rem 4rem;
+    font-size: $default-font-size;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 10rem;
+    position: relative;
+
+    // Change to button element
+    cursor: pointer;
+    border: none;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.7s;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.5);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.7rem 1rem rgba($color-black, 0.7);
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: $color-grey-dark-3;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &--animated {
+    animation: moveFromBottom 0.7s ease-out 0.5s;
+    animation-fill-mode: backwards;
+  }
+}
+
+.feature-box {
+  background-color: $color-grey-light-3;
+  border-radius: 4px;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 0.7rem 1.5rem rgba($color-black, 0.7);
+  transform: all 1s;
+
+  height: 35rem;
+
+  @include respond(tab-land) {
+    height: 24rem;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    transform: translateY(-0.5rem);
+    box-shadow: 0 2rem 3rem rgba($color-black, 0.5);
+  }
+
+  &__icon {
+    height: 6rem;
+    margin: 1rem 0;
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    padding: 1.5rem;
+  }
+}
