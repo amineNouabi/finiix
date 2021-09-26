@@ -9,6 +9,7 @@
     text-transform: uppercase;
     border-radius: 10rem;
     position: relative;
+    transition: all .5s;
 
     // Change to button element
     cursor: pointer;
@@ -64,7 +65,8 @@
   text-align: center;
   padding: 0.5rem 1rem;
   box-shadow: 0 0.7rem 1.5rem rgba($color-black, 0.7);
-  transform: all 1s;
+  /*transition: transform .5s, box-shadow .5s;*/
+
 
   height: 35rem;
 
@@ -73,7 +75,6 @@
   }
 
   &:hover {
-    transform: scale(1.05);
     transform: translateY(-0.5rem);
     box-shadow: 0 2rem 3rem rgba($color-black, 0.5);
   }
@@ -81,10 +82,92 @@
   &__icon {
     height: 6rem;
     margin: 1rem 0;
+    backface-visibility: hidden;
   }
 
   &__text {
     font-size: 1.5rem;
     padding: 1.5rem;
+    backface-visibility: hidden;
+  }
+}
+
+.card {
+  height: 25rem;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0 1rem .7rem rgba($color-black, 0.7);
+  transition: all .5s;
+
+  &:hover {
+    transform: scale(2, 1.5);
+    transform: translateY(-5px);
+    box-shadow: 0 2rem 1.5rem rgba($color-black, 0.5);
+    cursor: pointer;
+  }
+
+  &__heading {
+    position: absolute;
+    bottom: 3rem;
+    right: 2rem;
+    font-size: 2rem;
+    color: $color-white;
+    padding: .5rem 1rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    backface-visibility: hidden;
+    
+
+    &--1 {
+      background: linear-gradient(to right, rgba($color-secondary, .8), rgba($color-secondary-dark, .65));
+    }
+
+    &--2 {
+      background: linear-gradient(to right, rgba($color-third, .7), rgba($color-third-dark, .6));
+    }
+    &--3 {
+      background: linear-gradient(to right, rgba($color-primary, .8), rgba($color-primary-dark, .65));
+    }
+    &--4 {
+      background: linear-gradient(to right, rgba($color-fourth, .8), rgba($color-fourth-dark, .65));
+    }
+    &--5 {
+      background: linear-gradient(to right, rgba($color-fifth, .97), rgba($color-fifth-dark, .79));
+    }
+    &--6 {
+      background: linear-gradient(to right, rgba($color-secondary, .97), rgba($color-secondary-dark, .79));
+    }
+  }
+
+  &__pic {
+    background-size: cover;
+    height: 25rem;
+    background-blend-mode: screen;
+    border-radius: 5px;
+
+    &--1 {
+      background-image: linear-gradient(to right bottom, $color-secondary, $color-secondary-dark), url(../img/business.jpg);
+    }
+
+    &--2 {
+      background-image: linear-gradient(to right bottom, rgba($color-third, .4), rgba($color-third-dark, .3)), url(../img/gift.jpg);
+    }
+
+    &--3 {
+      background-image: linear-gradient(to right bottom, rgba($color-primary, .8), rgba($color-primary-dark, .7)), url(../img/decoration.jpg);
+    }
+
+    &--4 {
+      background-image: linear-gradient(to right bottom, rgba($color-fourth, .5), rgba($color-fourth-dark, .4)), url(../img/gadget.jpg);
+    }
+
+    &--5 {
+      background-image: linear-gradient(to right bottom, rgba($color-fifth, .8), rgba($color-fifth-dark, .7)), url(../img/3d.jpg);
+    }
+
+    &--6 {
+      background-image: linear-gradient(to right bottom, $color-secondary, $color-secondary-dark), url(../img/3d.jpg);
+    }
+
   }
 }

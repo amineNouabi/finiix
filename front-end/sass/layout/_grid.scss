@@ -54,6 +54,11 @@
 
   .col-1-of-3 {
     width: calc((100% - 2 * #{$horizontal-gutter}) / 3);
+
+
+    @include respond(tab-land) {
+      width: 100% !important;
+    }
   }
 
   .col-2-of-3 {
@@ -79,4 +84,5 @@
       #{$horizontal-gutter} * 2 + 3 * (100% - 3 * #{$horizontal-gutter}) / 4
     );
   }
+
 }
