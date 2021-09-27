@@ -54,3 +54,28 @@
     padding-bottom: 3rem;
   }
 }
+
+.section-footer{
+  /*background-image: linear-gradient(
+    to top,
+    rgba($color-black, 1),
+    rgba($color-grey-dark-1, 1)
+  );
+  */
+  background: #434343;  
+  background: -webkit-linear-gradient(to bottom, #434343, #000000);  
+  background: linear-gradient(to bottom, #434343, #000000); 
+  height: 40rem;
+  padding: 10rem;
+
+  border-top: 1px solid $color-grey-dark-1 ;
+  color: $color-white;
+
+  @include respond(tab-port){
+    padding: 3rem;
+  }
+  @include respond(phone) {
+    height: 60rem;
+    padding: 10rem 0;
+  }
+}
