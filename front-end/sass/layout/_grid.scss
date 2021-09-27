@@ -10,37 +10,44 @@
     }
   }
 
-  @include respond(tab-land) {
-    max-width: 93rem;
+  .section-services > & {
+    @include respond(tab-land){
+      width: 90rem important;
+    }
+
+    @include respond(phone){
+
+    }
   }
 
-  @include respond(tab-port) {
-    max-width: 50rem;
+  .section-philosophy > & {
+    @include respond(tab-land) {
+      max-width: 93rem;
+    }
+  
+    @include respond(tab-port) {
+      max-width: 50rem;
+    }
+  
+    @include respond(phone) {
+      padding: 0 3rem;
+    }
   }
 
-  @include respond(phone) {
-    padding: 0 3rem;
-  }
+  
 
   @include clearfix;
 
   [class^="col-"] {
     float: left;
 
-    &:nth-child(2) {
-      @include respond(tab-land) {
-        margin-right: 0 !important;
-      }
-    }
+    
 
     &:not(:last-child) {
-      margin-right: $horizontal-gutter;
-
-      @include respond(tab-port) {
-        margin-right: 0 !important;
-        margin-bottom: $vertical-gutter-s !important;
-      }
+      margin-right: $horizontal-gutter; 
     }
+
+    
 
     @include respond(tab-land) {
       margin-bottom: 2rem;
@@ -54,10 +61,31 @@
 
   .col-1-of-3 {
     width: calc((100% - 2 * #{$horizontal-gutter}) / 3);
+    margin-bottom: 6rem;
 
+    
 
     @include respond(tab-land) {
-      width: 100% !important;
+      width: calc((100% - 2 * #{$horizontal-gutter-s}) / 3);
+      &:not(:last-child){
+        margin-right: $horizontal-gutter-s;
+      }
+    }
+      &:nth-child(3) {
+        margin-right: 0;
+      }
+    @include respond(tab-port) {
+      width: calc((100% - #{$horizontal-gutter-s}) / 2);
+      &:nth-child(3){
+        margin-right: $horizontal-gutter-s !important;
+      }
+      &:nth-child(2), &:nth-child(4){
+        margin-right: 0;
+      }
+      
+    }
+    @include respond(phone){
+      width: 100%;
     }
   }
 
@@ -73,9 +101,25 @@
       width: calc(
         #{$horizontal-gutter} + (100% - 3 * #{$horizontal-gutter}) / 2
       ) !important;
+      &:not(:last-child){
+        margin-right: $horizontal-gutter;
+      }
     }
+  
     @include respond(tab-port) {
       width: 100% !important;
+      
+      margin-bottom: $vertical-gutter-s !important;
+
+      &:not(:last-child) {
+        margin-right: 0 !important;
+      }
+    }
+
+    &:nth-child(2) {
+      @include respond(tab-land) {
+        margin-right: 0 !important;
+      }
     }
   }
 
@@ -86,3 +130,6 @@
   }
 
 }
+
+
+
