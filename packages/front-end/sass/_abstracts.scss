@@ -5,8 +5,8 @@
 $color-primary: #feff01;
 $color-primary-dark: #989901;
 
-$color-secondary: #3615B0;
-$color-secondary-dark: #1B0B58;
+$color-secondary: #3615b0;
+$color-secondary-dark: #1b0b58;
 
 $color-third: #ff0101;
 $color-third-dark: #b30101;
@@ -45,9 +45,9 @@ $horizontal-gutter-s: 1rem;
 
 @mixin clearfix {
   &::after {
+    clear: both;
     content: "";
     display: table;
-    clear: both;
   }
 }
 

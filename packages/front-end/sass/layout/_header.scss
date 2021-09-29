@@ -1,49 +1,47 @@
 .header {
-  position: relative;
-  height: 75vh;
   /*background-image: linear-gradient(
     to bottom,
     rgba($color-grey-dark-1, 1),
     rgba($color-black, 1)
-  );*/ 
+  );*/
 
-  background: #434343;  
-  background: -webkit-linear-gradient(to bottom, #434343, #000000);  
-  background: linear-gradient(to bottom, #434343, #000000); 
-  
+  background: #434343;
+  background: linear-gradient(to bottom, #434343, #000);
+  background: linear-gradient(to bottom, #434343, #000);
 
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 60vh, 0% 100%);
   clip-path: polygon(0 0, 100% 0, 100% 60vh, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 60vh, 0% 100%);
+  height: 75vh;
+  position: relative;
   @include respond(tab-port) {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 65vh, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 65vh, 0% 100%);
     clip-path: polygon(0 0, 100% 0, 100% 65vh, 0% 100%);
   }
   @include respond(phone) {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 70vh, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 70vh, 0% 100%);
     clip-path: polygon(0 0, 100% 0, 100% 70vh, 0% 100%);
   }
   &__logo-box {
+    height: 10rem;
+    left: 3rem;
     position: absolute;
     top: 3rem;
-    left: 3rem;
-    height: 10rem;
     width: 10rem;
   }
 
   &__logo {
+
+    animation: logoAnim 0.7s ease-in-out 0.5s;
+    animation-fill-mode: backwards;
     height: 90%;
     transition: transform 1s;
-
-    animation: logoAnim 0.7s ease-in-out .5s;
-    animation-fill-mode: backwards;
-
   }
 
   &__text-box {
-    position: absolute;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    position: absolute;
     text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }

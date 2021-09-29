@@ -1,0 +1,127 @@
+.footer {
+  display: flex;
+
+  width: 100%;
+
+  @include respond(phone) {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    height: 7rem;
+    margin-right: 2rem;
+
+    @include respond(phone) {
+      margin-right: 0;
+    }
+    &-holder {
+      align-items: center;
+      display: flex;
+
+      @include respond(phone) {
+        justify-content: space-around;
+      }
+    }
+  }
+
+  &__social {
+    flex: 0 0 66%;
+    flex-direction: column;
+
+    @include respond(phone) {
+      order: 2;
+    }
+
+    &-media {
+
+      align-content: center;
+      display: flex;
+      margin-top: 8rem;
+
+      @include respond(tab-port) {
+        margin-top: 15rem;
+      }
+
+      @include respond(phone) {
+        justify-content: center;
+        margin-top: 5rem;
+      }
+
+      & > img {
+        height: 4.5rem;
+
+        transition: all 0.5s;
+
+        &:not(:first-child) {
+          margin-left: 2.5rem;
+        }
+
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+
+    @include respond(phone) {
+      text-align: center;
+    }
+  }
+
+  &__heading {
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 0.4rem;
+
+    @include respond(phone) {
+      text-align: center;
+    }
+
+    &-2 {
+      color: $color-grey-light-3;
+      font-size: 2rem;
+      font-weight: 600;
+
+      @include respond(phone) {
+        text-align: center;
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    &--item {
+      &,
+      &:link,
+      &:visited {
+        color: $color-grey-light-2;
+        font-size: 1.4rem;
+        margin-left: 3rem;
+        margin-top: 0.6rem;
+        text-decoration: none;
+        transition: transform 0.5s;
+
+        @include respond(phone) {
+          margin-left: 0;
+          text-align: center;
+
+          &:last-child {
+            margin-bottom: 10rem;
+          }
+        }
+
+        &:hover {
+          transform: skewY(3deg) scale(1.5);
+        }
+      }
+    }
+  }
+}

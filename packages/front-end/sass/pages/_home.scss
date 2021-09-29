@@ -1,77 +1,71 @@
 .section-about {
-  margin-top: -20rem;
-  padding-top: 25rem;
-  padding-bottom: 15rem;
   background-color: $color-grey-light-3;
+  margin-top: -20rem;
+  padding-bottom: 15rem;
+  padding-top: 25rem;
   text-align: center;
 
   @include respond(tab-port) {
     margin-top: -15rem;
-    padding-top: 20rem;
     padding-bottom: 10rem;
+    padding-top: 20rem;
   }
 }
-  
 
 .section-philosophy {
-  margin-top: -5rem;
   background-image: linear-gradient(
     to bottom,
     rgba($color-black, 1),
     rgba(/*$color-grey-dark-1*/ $color-grey-light-3, 1)
   );
+  margin-top: -5rem;
   padding: 10rem 0;
   transform: skewY(-4deg);
 
-  & > *{
-    transform: skewY(4deg);
-  }
-
-  @include respond(tab-port){
+  @include respond(tab-port) {
     padding-bottom: 7rem;
   }
 
-
-  @include respond(phone)
-  {
+  @include respond(phone) {
     padding-bottom: 5rem;
   }
 
+  & > * {
+    transform: skewY(4deg);
+  }
 }
 
-
 .section-services {
+  background-color: $color-grey-light-3;
   margin-top: -10rem;
   padding: 15rem 0;
-  background-color: $color-grey-light-3;
 
-  @include respond(tab-port){
-    padding-bottom: 7rem ;
+  @include respond(tab-port) {
+    padding-bottom: 7rem;
   }
 
-  @include respond(phone)
-  {
+  @include respond(phone) {
     padding-bottom: 3rem;
   }
 }
 
-.section-footer{
+.section-footer {
   /*background-image: linear-gradient(
     to top,
     rgba($color-black, 1),
     rgba($color-grey-dark-1, 1)
   );
   */
-  background: #434343;  
-  background: -webkit-linear-gradient(to bottom, #434343, #000000);  
-  background: linear-gradient(to bottom, #434343, #000000); 
+  background: #434343;
+  background: linear-gradient(to bottom, #434343, #000);
+  background: linear-gradient(to bottom, #434343, #000);
+
+  border-top: 1px solid $color-grey-dark-1;
+  color: $color-white;
   height: 40rem;
   padding: 10rem;
 
-  border-top: 1px solid $color-grey-dark-1 ;
-  color: $color-white;
-
-  @include respond(tab-port){
+  @include respond(tab-port) {
     padding: 3rem;
   }
   @include respond(phone) {

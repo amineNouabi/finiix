@@ -1,0 +1,14 @@
+{
+  "name": "@finiix/back-end",
+  "version": "1.0.0",
+  "description": "Finnix back end",
+  "repository": "https://github.com/amineNouabi/finiix.git",
+  "author": "amineNouabi <aminenouabi9@gmail.com>",
+  "main": "server.js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.8"
+  }
+}

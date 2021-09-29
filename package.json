@@ -1,0 +1,20 @@
+{
+  "name": "@finiix/core",
+  "version": "1.0.0",
+  "main": "",
+  "repository": "https://github.com/amineNouabi/finiix.git",
+  "author": "amineNouabi <aminenouabi9@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/normalize-scss"
+    ]
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
