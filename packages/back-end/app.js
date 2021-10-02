@@ -1,17 +1,17 @@
+const path = require('path');
 const express = require("express");
-
+const morgan  = require("morgan");
 
 
 const app = express();
 
-let obj = {message: "Hi"};
-
-app.use((req, res, next) => {
-    res.json(JSON.stringify())
-})
+/* if(process.env.NODE_ENV === "development")  app.use(morgan('dev'));*/ 
 
 
+app.use("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "..", "front-end", "index.html"));
+});
 
-app.listen(3000, () => {
-    console.log("Server is Listening on port 3000...");
-})
+
+
+module.exports = app;

@@ -57,7 +57,7 @@ body {
 
 .heading-secondary {
   background: linear-gradient(to right, $color-primary, $color-black);
-  background-clip: text;
+  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   display: inline-block;
@@ -68,7 +68,7 @@ body {
 
   &--white {
     background: linear-gradient(to right, $color-primary, $color-white);
-    background-clip: text;
+    -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }

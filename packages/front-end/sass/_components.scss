@@ -139,8 +139,8 @@
     &--2 {
       background: linear-gradient(
         to right,
-        rgba(/*$color-third*/ #ae3ec9, 0.7),
-        rgba(/*$color-third-dark*/ #9c36b5, 0.6)
+        rgba($color-third /* #ae3ec9*/, 0.7),
+        rgba($color-third-dark /* #9c36b5 */, 0.6)
       );
     }
     &--3 {
@@ -185,55 +185,55 @@
 
     &--1 {
       background-image: linear-gradient(
-        to right bottom,
-        $color-secondary,
-        $color-secondary-dark
-      ),
+          to right bottom,
+          $color-secondary,
+          $color-secondary-dark
+        ),
         url(../img/business.jpg);
     }
 
     &--2 {
       background-image: linear-gradient(
-        to right bottom,
-        rgba(#ae3ec9, 0.75),
-          rgba(#8b10aa, .65)
+          to right bottom,
+          rgba($color-third /*#ae3ec9*/, 0.5),
+          rgba($color-third-dark /*#8b10aa*/, 0.4)
         ),
-        url(../img/gift.jpg)    ;
+        url(../img/gift.jpg);
     }
 
     &--3 {
       background-image: linear-gradient(
-        to right bottom,
-        rgba($color-primary, 0.8),
-        rgba($color-primary-dark, 0.7)
-      ),
+          to right bottom,
+          rgba($color-primary, 0.8),
+          rgba($color-primary-dark, 0.7)
+        ),
         url(../img/decoration.jpg);
     }
 
     &--4 {
       background-image: linear-gradient(
-        to right bottom,
-        rgba($color-fourth, 0.5),
-        rgba($color-fourth-dark, 0.4)
-      ),
+          to right bottom,
+          rgba($color-fourth, 0.5),
+          rgba($color-fourth-dark, 0.4)
+        ),
         url(../img/gadget.jpg);
     }
 
     &--5 {
       background-image: linear-gradient(
-        to right bottom,
-        rgba($color-fifth, 0.8),
-        rgba($color-fifth-dark, 0.7)
-      ),
+          to right bottom,
+          rgba($color-fifth, 0.8),
+          rgba($color-fifth-dark, 0.7)
+        ),
         url(../img/3d.jpg);
     }
 
     &--6 {
       background-image: linear-gradient(
-        to right bottom,
-        $color-secondary,
-        $color-secondary-dark
-      ),
+          to right bottom,
+          $color-secondary,
+          $color-secondary-dark
+        ),
         url(../img/3d.jpg);
     }
   }

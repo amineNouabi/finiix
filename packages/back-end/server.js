@@ -1,17 +1,21 @@
-const path = require("path");
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
 
+dotenv.config({ path: './config.env'});
+const PORT = process.env.PORT || 3000;
 
-const express = require('express');
+const app = require('./app');
 
+/*
+mongoose
+    .connect(process.env.DATABASE_LOCAL, {
+        useNewUrlParser: true,
+        useCreateIndex: true,
+        useFindModify: false
+    })
+    .then(() => console.log("Database connection successful!"));
+*/
 
-
-const app= express();
-
-
-app.use((req, res) => {
-    res.sendFile(path.join(__dirname, "..", "front-end", "index.html"));
-})
-
-app.listen(3000, () => {
-    console.log("Server Listening on port 3000 ...");
+app.listen(PORT, () => {
+    console.log("App is running on port: " + PORT + "...");
 });
